@@ -29,3 +29,16 @@ if(playerInput == '1'){
 }
 
 printMessage('Twój ruch to: ' + playerMove);
+
+if(
+    (computerMove == 'kamień' && playerMove == 'papier') ||
+    (computerMove == 'papier' && playerMove == 'nożyce') ||
+    (computerMove == 'nożyce' && playerMove == 'kamień')) {
+    printMessage('Ty wygrywasz!');
+  } else if (computerMove == playerMove) {
+    printMessage('Mamy remis!');
+  } else if (playerMove == 'nieznany ruch') {
+    printMessage('Nie wybrałeś wartości z zakresu 1-3!');
+  } else {
+    printMessage('Przegrałeś!');
+  }
